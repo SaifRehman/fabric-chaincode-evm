@@ -10,11 +10,13 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"golang.org/x/build/version"
 
 	"github.com/hyperledger/fabric-chaincode-evm/ethserver"
 )
 
 func main() {
+	version.Run("go1.9.3")
 	configFile := os.Getenv("ETHSERVER_CONFIG")
 	user := os.Getenv("ETHSERVER_USER")
 	if user == "" {
